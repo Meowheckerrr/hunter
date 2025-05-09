@@ -1,0 +1,34 @@
+2025-05-08 23:38:36 - project - INFO - Starting application (Auto: False, Tor: False)
+2025-05-08 23:38:36 - project - INFO - Found domain.txt
+2025-05-08 23:38:36 - project - INFO - Using Burp Suite path: /home/kali/BurpSuitePro/BurpSuitePro
+2025-05-08 23:38:36 - project - INFO - Static filter pattern: grep -Eiv '\.(jpg|jpeg|png|gif|bmp|svg|webp|ico|tiff|tif|avif|woff|woff2|ttf|otf|eot|fon|mp4|avi|mov|mkv|webm|flv|m4v|mp3|wav|ogg|flac|aac|css|less|sass|scss)(\?.*)?$'
+2025-05-08 23:38:39 - project - INFO - Starting Burp Suite at /home/kali/BurpSuitePro/BurpSuitePro
+2025-05-08 23:38:39 - project - INFO - 🌀 [Starting]: /home/kali/BurpSuitePro/BurpSuitePro
+2025-05-08 23:38:39 - project - INFO - Burp Suite started in thread
+2025-05-08 23:39:32 - project - INFO - ✅ Port 8080 on localhost is open
+2025-05-08 23:39:32 - project - INFO - Burp Suite proxy port 8080 is ready
+2025-05-08 23:39:32 - project - INFO - Using subfinder path: /usr/bin/subfinder
+2025-05-08 23:39:32 - project - INFO - Using httpx-toolkit path: /usr/bin/httpx-toolkit
+2025-05-08 23:39:32 - project - INFO - Starting assetFinder with alive check
+2025-05-08 23:39:32 - project - INFO - 🌀 [Starting]: python3 /root/assetFinder.py
+2025-05-08 23:39:32 - project - INFO - Starting subfinder with alive check
+2025-05-08 23:39:32 - project - INFO - 🌀 [Starting]: /usr/bin/subfinder -dL domain.txt | anew subdomains.txt
+2025-05-08 23:40:00 - project - INFO - ✅ [Completed] /usr/bin/subfinder -dL domain.txt | anew subdomains.txt
+2025-05-08 23:40:00 - project - INFO - ➡️ [Chaining] /usr/bin/httpx-toolkit -l subdomains.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveSubDomains.txt
+2025-05-08 23:40:00 - project - INFO - 🌀 [Starting]: /usr/bin/httpx-toolkit -l subdomains.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveSubDomains.txt
+2025-05-08 23:40:05 - project - INFO - ✅ [Completed] python3 /root/assetFinder.py
+2025-05-08 23:40:05 - project - INFO - ➡️ [Chaining] /usr/bin/httpx-toolkit -l assets.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveAssets.txt
+2025-05-08 23:40:05 - project - INFO - 🌀 [Starting]: /usr/bin/httpx-toolkit -l assets.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveAssets.txt
+2025-05-08 23:41:11 - project - INFO - ✅ [Completed] /usr/bin/httpx-toolkit -l subdomains.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveSubDomains.txt
+2025-05-08 23:41:33 - project - INFO - ✅ [Completed] /usr/bin/httpx-toolkit -l assets.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveAssets.txt
+2025-05-08 23:41:33 - project - INFO - AssetFinder and subfinder tasks completed
+2025-05-08 23:41:33 - project - INFO - Using wafw00f path: /usr/bin/wafw00f
+2025-05-08 23:41:33 - project - INFO - [WAF] Using Burp proxy to scan WAF (8080)
+2025-05-08 23:41:33 - project - INFO - 🚀 [Scanning] Using proxy 8080 to scan domains and subdomains
+2025-05-08 23:41:33 - project - INFO - [WAF] Using Burp proxy to scan WAF (8080)
+2025-05-08 23:41:33 - project - INFO - 🌀 [Starting]: /usr/bin/wafw00f --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json --proxy 8080
+2025-05-08 23:43:36 - project - INFO - 💥 Detected Ctrl+C, cleaning up subprocesses...
+2025-05-08 23:43:36 - project - INFO - 🛑 Terminated PID 614479
+2025-05-08 23:43:36 - project - INFO - 🛑 Terminated PID 634816
+2025-05-08 23:43:36 - project - ERROR - ❗ [Failed] /home/kali/BurpSuitePro/BurpSuitePro, exit code = -15
+2025-05-08 23:43:36 - project - ERROR - ❗ [Failed] /usr/bin/wafw00f --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json --proxy 8080, exit code = -15

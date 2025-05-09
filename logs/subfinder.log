@@ -1,3 +1,27 @@
+
+               __    _____           __         
+   _______  __/ /_  / __(_)___  ____/ /__  _____
+  / ___/ / / / __ \/ /_/ / __ \/ __  / _ \/ ___/
+ (__  ) /_/ / /_/ / __/ / / / / /_/ /  __/ /    
+/____/\__,_/_.___/_/ /_/_/ /_/\__,_/\___/_/
+
+		projectdiscovery.io
+
+[[34mINF[0m] Loading provider config from /root/.config/subfinder/provider-config.yaml
+[[34mINF[0m] Enumerating subdomains for newegg.com
+[[34mINF[0m] Found 204 subdomains for newegg.com in 21 seconds 996 milliseconds
+
+    __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/              v1.1.5
+
+		projectdiscovery.io
+
+Use with caution. You are responsible for your actions.
+Developers assume no liability and are not responsible for any misuse or damage.
 https://apis.newegg.com
 https://api.newegg.com
 https://chat.newegg.com

@@ -10,7 +10,7 @@ from utils.subprocess_utils import *
 from utils.file_utils import *
 from utils.network_utils import *
 
-## Tools Args 
+## Tools Args t
 def parse_args() -> argparse.Namespace:
     """
     Parse command-line arguments.
@@ -19,7 +19,7 @@ def parse_args() -> argparse.Namespace:
         Parsed arguments.
     """
     parser = argparse.ArgumentParser(description="ScanScript")
-    parser.add_argument('--auto', action='store_true', help='Enable automation mode (default all interactive options to Y)')
+    parser.add_argument('--auto', action='sore_true', help='Enable automation mode (default all interactive options to Y)')
     parser.add_argument('--tor', action='store_true', help='Use Tor as the proxy')
     parser.add_argument('--burp-path', help='Path to Burp Suite executable', default='/home/kali/BurpSuitePro/BurpSuitePro')
     return parser.parse_args()
@@ -77,17 +77,20 @@ def main() -> None:
 
         # Confirm Burp Suite startup
         BurpSuit = None
+        proxy_port = 9050 if USE_TOR else 8080
+
+        proxy = 
+
         if confirm_burp_start(AUTOMATE):
             logger.info(f"Starting Burp Suite at {BURP_PATH}")
             BurpSuit = run_tool_as_thread(BURP_PATH, log_file="logs/burp.log")
             logger.info("Burp Suite started in thread")
 
             # Wait for Burp Suite proxy port (default 8080, or 9050 for Tor)
-            port = 9050 if USE_TOR else 8080
-            if wait_for_port("localhost", port, timeout=9999):
-                logger.info(f"Burp Suite proxy port {port} is ready")
+            if wait_for_port("localhost", proxy_port, timeout=9999):
+                logger.info(f"Burp Suite proxy port {proxy_port} is ready")
             else:
-                logger.error(f"Burp Suite proxy port {port} not ready")
+                logger.error(f"Burp Suite proxy port {proxy_port} not ready")
                 sys.exit(1)
         else:
             logger.info("Skipping Burp Suite startup")
@@ -130,15 +133,24 @@ def main() -> None:
 
         #------------------------------------------------------------------
 
-        # Check wafw00f executables
+        # Check wafw00f executables & Use Proxy or not 
         WAFW00F_PATH = locate_executable("wafw00f")
         logger.info(f"Using wafw00f path: {WAFW00F_PATH}")
+        use_proxy = USE_TOR or BurpSuit is not None
 
-        # Run wafw00f scan
-        logger.info(f"🚀 [Scanning] Using proxy {proxy} to scan domains and subdomains")
-        logger.info(f"[WAF] Using {'Tor' if USE_TOR else 'Burp'} proxy to scan WAF ({proxy})")
+
+        if use_proxy:
+            logger.info(f"[WAF] Using {'Tor' if USE_TOR else 'Burp'} proxy to scan WAF ({proxy_port})")
+            # Run wafw00f scan
+            logger.info(f"🚀 [Scanning] Using proxy {proxy_port} to scan domains and subdomains")
+            logger.info(f"[WAF] Using {'Tor' if USE_TOR else 'Burp'} proxy to scan WAF ({proxy_port})")
+            wafw00f_cmd = f"{WAFW00F_PATH} --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json --proxy {proxy_port}"
+        else:
+            logger.info("[WAF] Scanning without proxy")
+            wafw00f_cmd = f"{WAFW00F_PATH} --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json"
+        
         wafw00f_thread = run_tool_as_thread(
-            f"{WAFW00F_PATH} --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json --proxy {proxy}",
+            wafw00f_cmd,
             log_file="logs/wafw00f.log"
         )
         wafw00f_thread.join()
