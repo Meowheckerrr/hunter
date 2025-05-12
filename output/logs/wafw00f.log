@@ -1,3 +1,31 @@
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='mail.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e10550>: Failed to resolve 'mail.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site mail.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='api.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e12210>: Failed to resolve 'api.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site api.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='www.api.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e10690>: Failed to resolve 'www.api.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site www.api.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='excelinfo.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e11e50>: Failed to resolve 'excelinfo.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site excelinfo.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='monitor.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e11f90>: Failed to resolve 'monitor.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site monitor.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='flechagames.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e11590>: Failed to resolve 'flechagames.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site flechagames.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='blog.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e10e10>: Failed to resolve 'blog.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site blog.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='www.blog.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e12350>: Failed to resolve 'www.blog.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site www.blog.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='clemiltondesouzarosa.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e12710>: Failed to resolve 'clemiltondesouzarosa.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site clemiltondesouzarosa.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='www.subdomains.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e12e90>: Failed to resolve 'www.subdomains.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site www.subdomains.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='altovicio.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e13250>: Failed to resolve 'altovicio.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site altovicio.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='subdominios.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e13610>: Failed to resolve 'subdominios.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site subdominios.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='pick-this.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e13750>: Failed to resolve 'pick-this.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site pick-this.mercadoshops.com appears to be down
+ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='obrasenseco.mercadoshops.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1a25e13110>: Failed to resolve 'obrasenseco.mercadoshops.com' ([Errno -2] Name or service not known)"))
+ERROR:wafw00f:Site obrasenseco.mercadoshops.com appears to be down
 
                 [1;97m______
                [1;97m/      \
@@ -16,287 +44,41 @@
                         [1;96m~ WAFW00F : [1;94mv2.2.0 ~[1;97m
         The Web Application Firewall Fingerprinting Toolkit
     [0m
-[*] Checking https://thgoporcides.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://alfeststore.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
 [*] Checking https://www.analytics.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://flechagames.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://obrasenseco.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://tatetiparati.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://modalojinhadofuxico.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://infocrip.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://subdominios.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://analytics.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://clemiltondesouzarosa.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://developers.mercadoshops.com
-[+] The site [1;94mhttps://developers.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
-[~] Number of requests: 2
-[*] Checking https://pick-this.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://sapfhire.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://insumosyserviciosindustriales.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://aszi.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://sudomains.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://linestyle.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://mipol.com.ar.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://loveshop.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://soal9109207.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://clublanus.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://desativadosubdomains.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://heymamawolfdsg.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://montur.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://mercado.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://guillermomessina.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://diretoonline.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://subdomains.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://static.mercadoshops.com
-[+] The site [1;94mhttps://static.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
-[~] Number of requests: 2
-[*] Checking https://www.subdomains.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://palermofazio.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://2subdomains.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://dtgshop.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://multidc.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://todaviaestiempo.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://upavirtualcomar.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://monitor.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://electronicachacao.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://dydferreteria.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://lafrancoperfumeria.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://madererasudamericana.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://floni.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://materialesmoreno.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://almacenanamaria.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://excelinfo.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://altovicio.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://tienda.readytoparty.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://mail.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://www.api.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://desa.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://lacasadeleliminador.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://rodthia.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://alassio.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://www.blog.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://api.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://apdomingos.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://subdomians.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://alofino.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://kareninoacessorios.com.brsubdomains.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://surfax.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://caciquesombreros.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://blog.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://testdev.mercadoshops.com
 [+] Generic Detection results:
 [-] No WAF detected by the generic detection
 [~] Number of requests: 7
 [*] Checking https://www.mercadoshops.com
 [+] The site [1;94mhttps://www.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
 [~] Number of requests: 2
-[*] Checking https://estampefotos.mercadoshops.com
+[*] Checking https://mail.mercadoshops.com
+[*] Checking https://api.mercadoshops.com
+[*] Checking https://www.api.mercadoshops.com
+[*] Checking https://subdomains.mercadoshops.com
 [+] Generic Detection results:
 [-] No WAF detected by the generic detection
 [~] Number of requests: 7
+[*] Checking https://excelinfo.mercadoshops.com
+[*] Checking https://monitor.mercadoshops.com
+[*] Checking https://flechagames.mercadoshops.com
 [*] Checking https://ayuda.mercadoshops.com
 [+] The site [1;94mhttps://ayuda.mercadoshops.com[0m is behind [1;96mAWS Elastic Load Balancer (Amazon)[0m WAF.
 [~] Number of requests: 2
-[*] Checking https://subdomain.mercadoshops.com
+[*] Checking https://blog.mercadoshops.com
+[*] Checking https://www.blog.mercadoshops.com
+[*] Checking https://clemiltondesouzarosa.mercadoshops.com
+[*] Checking https://www.subdomains.mercadoshops.com
+[*] Checking https://altovicio.mercadoshops.com
+[*] Checking https://analytics.mercadoshops.com
 [+] Generic Detection results:
 [-] No WAF detected by the generic detection
 [~] Number of requests: 7
-[*] Checking https://jironesdemivida.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://prontomotos.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://hechoamanomarket.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-[*] Checking https://ariv5659788.mercadoshops.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
+[*] Checking https://static.mercadoshops.com
+[+] The site [1;94mhttps://static.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
+[~] Number of requests: 2
+[*] Checking https://developers.mercadoshops.com
+[+] The site [1;94mhttps://developers.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
+[~] Number of requests: 2
+[*] Checking https://subdominios.mercadoshops.com
+[*] Checking https://pick-this.mercadoshops.com
+[*] Checking https://obrasenseco.mercadoshops.com

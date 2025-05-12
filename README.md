@@ -1,6 +1,5 @@
 # hunter
 
-
 ## Structure
 project/
 ├── main.py                # Main entry point

@@ -69,10 +69,10 @@ def main() -> None:
     proxy = "socks5://127.0.0.1:9050" if USE_TOR else "http://127.0.0.1:8080"
 
     # Configure logger
-    setup_logger(log_file="logs/app.log", log_level=logging.DEBUG)
+    setup_logger(log_file=os.path.join(LOGS_DIR, "app.log"), log_level=logging.DEBUG)
     logger.info(f"Starting application (Auto: {AUTOMATE}, Tor: {USE_TOR})")
 
-     # Handle Ctrl+C
+    # Handle Ctrl+C
     signal.signal(signal.SIGINT, lambda _sig, _frame: kill_all_sub_process())
 
     # Check domain.txt 
@@ -83,7 +83,6 @@ def main() -> None:
 
     # Ensure output directories exist
     ensure_directories()
-
     try:
         # Find Burp Suite path
         BURP_PATH = locate_executable(
@@ -100,10 +99,9 @@ def main() -> None:
         BurpSuit = None
         proxy_port = 9050 if USE_TOR else 8080
 
-
         if confirm_burp_start(AUTOMATE):
             logger.info(f"Starting Burp Suite at {BURP_PATH}")
-            BurpSuit = run_tool_as_thread(BURP_PATH, log_file="logs/burp.log")
+            BurpSuit = run_tool_as_thread(BURP_PATH, log_file=os.path.join(LOGS_DIR, "burp.log"))
             logger.info("Burp Suite started in thread")
 
             # Wait for Burp Suite proxy port (default 8080, or 9050 for Tor)
@@ -115,9 +113,7 @@ def main() -> None:
         else:
             logger.info("Skipping Burp Suite startup")
 
-        
         #------------------------------------------------------------------------------------------------------------------------------------
-
         # Check assetFinder path
         ASSETFINDER_PATH = "/root/assetFinder.py"
         if not os.path.exists(ASSETFINDER_PATH):
@@ -134,11 +130,10 @@ def main() -> None:
 
         #------------------------------------------------------------------------------------------------------------------------------------
 
-
         # Run assetFinder with alive check
         logger.info("Starting assetFinder with alive check")
         assetFinder_thread = run_tool_as_thread(
-            f"python3 {ASSETFINDER_PATH}",
+            f"python3 {ASSETFINDER_PATH} | anew {os.path.join(TEMP_DIR, 'assets.txt')}",
             f"{HTTPX_PATH} -l {os.path.join(TEMP_DIR, 'assets.txt')} -ports 443,80,8080,8000,888 -threads 200 | anew {os.path.join(RESULTS_DIR, 'alive_assets.txt')}",
             log_file=os.path.join(LOGS_DIR, "assetfinder.log")
         )
