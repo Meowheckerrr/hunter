@@ -10,7 +10,14 @@ from utils.subprocess_utils import *
 from utils.file_utils import *
 from utils.network_utils import *
 
-## Tools Args t
+
+## Directory Structure
+OUTPUT_DIR = "output"                              # Base directory for all outputs
+RESULTS_DIR = os.path.join(OUTPUT_DIR, "results")  # Critical results
+LOGS_DIR = os.path.join(OUTPUT_DIR, "logs")        # Logs
+TEMP_DIR = os.path.join(OUTPUT_DIR, "temp")        # Intermediate files
+
+## Tools Args
 def parse_args() -> argparse.Namespace:
     """
     Parse command-line arguments.
@@ -19,7 +26,7 @@ def parse_args() -> argparse.Namespace:
         Parsed arguments.
     """
     parser = argparse.ArgumentParser(description="ScanScript")
-    parser.add_argument('--auto', action='sore_true', help='Enable automation mode (default all interactive options to Y)')
+    parser.add_argument('--auto', action='store_true', help='Enable automation mode (default all interactive options to Y)')
     parser.add_argument('--tor', action='store_true', help='Use Tor as the proxy')
     parser.add_argument('--burp-path', help='Path to Burp Suite executable', default='/home/kali/BurpSuitePro/BurpSuitePro')
     return parser.parse_args()
@@ -42,12 +49,24 @@ def confirm_burp_start(automate: bool) -> bool:
     # Accept 'Y', 'y', or empty input as Yes
     return response in ('', 'y', 'yes')
 
+
+def ensure_directories() -> None:
+    """
+    Ensure output directories exist. 
+    """
+    os.makedirs(OUTPUT_DIR,exist_ok=True)
+    os.makedirs(RESULTS_DIR,exist_ok=True)
+    os.makedirs(LOGS_DIR,exist_ok=True)
+    os.makedirs(TEMP_DIR,exist_ok=True)
+
+
 def main() -> None:
 
     # Parse CLI arguments
     args = parse_args()
     AUTOMATE = args.auto
     USE_TOR = args.tor
+    proxy = "socks5://127.0.0.1:9050" if USE_TOR else "http://127.0.0.1:8080"
 
     # Configure logger
     setup_logger(log_file="logs/app.log", log_level=logging.DEBUG)
@@ -56,12 +75,14 @@ def main() -> None:
      # Handle Ctrl+C
     signal.signal(signal.SIGINT, lambda _sig, _frame: kill_all_sub_process())
 
-    # Check domain.txt
+    # Check domain.txt 
     if not os.path.exists("domain.txt"):
         logger.error("找不到 'domain.txt' 呀～你是不是又忘記放了啊！快自己去創一個啦～")
         sys.exit(1)
     logger.info("Found domain.txt")
 
+    # Ensure output directories exist
+    ensure_directories()
 
     try:
         # Find Burp Suite path
@@ -79,7 +100,6 @@ def main() -> None:
         BurpSuit = None
         proxy_port = 9050 if USE_TOR else 8080
 
-        proxy = 
 
         if confirm_burp_start(AUTOMATE):
             logger.info(f"Starting Burp Suite at {BURP_PATH}")
@@ -96,7 +116,7 @@ def main() -> None:
             logger.info("Skipping Burp Suite startup")
 
         
-        #------------------------------------------------------------------
+        #------------------------------------------------------------------------------------------------------------------------------------
 
         # Check assetFinder path
         ASSETFINDER_PATH = "/root/assetFinder.py"
@@ -104,26 +124,30 @@ def main() -> None:
             logger.error(f"assetFinder not found at {ASSETFINDER_PATH}. Please ensure it’s installed.")
             sys.exit(1)
         
-        # Check subfinder and httpx-toolkit executables
+        # Check tool's executables paths. 
         SUBFINDER_PATH = locate_executable("subfinder")
         HTTPX_PATH = locate_executable("httpx-toolkit")
+        WAFW00F_PATH = locate_executable("wafw00f")
+        logger.info(f"Using wafw00f path: {WAFW00F_PATH}")
         logger.info(f"Using subfinder path: {SUBFINDER_PATH}")
         logger.info(f"Using httpx-toolkit path: {HTTPX_PATH}")
+
+        #------------------------------------------------------------------------------------------------------------------------------------
+
 
         # Run assetFinder with alive check
         logger.info("Starting assetFinder with alive check")
         assetFinder_thread = run_tool_as_thread(
             f"python3 {ASSETFINDER_PATH}",
-            f"{HTTPX_PATH} -l assets.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveAssets.txt",
-            log_file="logs/assetFinder.log"
+            f"{HTTPX_PATH} -l {os.path.join(TEMP_DIR, 'assets.txt')} -ports 443,80,8080,8000,888 -threads 200 | anew {os.path.join(RESULTS_DIR, 'alive_assets.txt')}",
+            log_file=os.path.join(LOGS_DIR, "assetfinder.log")
         )
 
         # Run subfinder with alive check
-        logger.info("Starting subfinder with alive check")
         subfinder_thread = run_tool_as_thread(
-            f"{SUBFINDER_PATH} -dL domain.txt | anew subdomains.txt",
-            f"{HTTPX_PATH} -l subdomains.txt -ports 443,80,8080,8000,888 -threads 200 | anew aliveSubDomains.txt",
-            log_file="logs/subfinder.log"
+            f"{SUBFINDER_PATH} -dL domain.txt | anew {os.path.join(TEMP_DIR, 'subdomains.txt')}",
+            f"{HTTPX_PATH} -l {os.path.join(TEMP_DIR, 'subdomains.txt')} -ports 443,80,8080,8000,888 -threads 200 | anew {os.path.join(RESULTS_DIR, 'alive_subdomains.txt')}",
+            log_file=os.path.join(LOGS_DIR, "subfinder.log")
         )
 
         # Wait for assetFinder and subfinder to complete
@@ -133,37 +157,36 @@ def main() -> None:
 
         #------------------------------------------------------------------
 
-        # Check wafw00f executables & Use Proxy or not 
-        WAFW00F_PATH = locate_executable("wafw00f")
-        logger.info(f"Using wafw00f path: {WAFW00F_PATH}")
+        # Check proxy port before wafw00f scan
         use_proxy = USE_TOR or BurpSuit is not None
 
-
         if use_proxy:
-            logger.info(f"[WAF] Using {'Tor' if USE_TOR else 'Burp'} proxy to scan WAF ({proxy_port})")
-            # Run wafw00f scan
-            logger.info(f"🚀 [Scanning] Using proxy {proxy_port} to scan domains and subdomains")
-            logger.info(f"[WAF] Using {'Tor' if USE_TOR else 'Burp'} proxy to scan WAF ({proxy_port})")
-            wafw00f_cmd = f"{WAFW00F_PATH} --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json --proxy {proxy_port}"
+            logger.info(f"[WAF] Using {'Tor' if USE_TOR else 'Burp'} proxy to scan WAF ({proxy})")
+            wafw00f_cmd = f"{WAFW00F_PATH} --input={os.path.join(TEMP_DIR, 'subdomains.txt')} --format=json --verbose --output={os.path.join(RESULTS_DIR, 'waf_results.json')} --proxy {proxy}"
         else:
             logger.info("[WAF] Scanning without proxy")
-            wafw00f_cmd = f"{WAFW00F_PATH} --input=subdomains.txt --format=json --verbose --output=waffSubDomains.json"
+            wafw00f_cmd = f"{WAFW00F_PATH} --input={os.path.join(TEMP_DIR, 'subdomains.txt')} --format=json --verbose --output={os.path.join(RESULTS_DIR, 'waf_results.json')}"
         
         wafw00f_thread = run_tool_as_thread(
             wafw00f_cmd,
-            log_file="logs/wafw00f.log"
+            log_file=os.path.join(LOGS_DIR, "wafw00f.log")
         )
         wafw00f_thread.join()
         logger.info("WAF scan completed")
 
         # Process WAF results
-        display_and_save_no_waf_domains("waffSubDomains.json", "no_waf_domains.txt")
+        display_and_save_no_waf_domains(
+            os.path.join(RESULTS_DIR, "waf_results.json"),
+            os.path.join(RESULTS_DIR, "no_waf_domains.txt")
+        )
 
-
-
+    except FileNotFoundError as e:
+        logger.error(f"💥 File error: {e}")
+        sys.exit(1)
 
     except Exception as e:
         logger.error(f"💥 Application error: {e}")
         sys.exit(1)
 
-main()
+if __name__ == "__main__":
+    main()

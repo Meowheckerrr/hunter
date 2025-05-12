@@ -1,0 +1,302 @@
+
+                [1;97m______
+               [1;97m/      \
+              [1;97m(  W00f! )
+               [1;97m\  ____/
+               [1;97m,,    [1;92m__            [1;93m404 Hack Not Found
+           [1;96m|`-.__   [1;92m/ /                     [1;91m __     __
+           [1;96m/"  _/  [1;92m/_/                       [1;91m\ \   / /
+          [1;94m*===*    [1;92m/                          [1;91m\ \_/ /  [1;93m405 Not Allowed
+         [1;96m/     )__//                           [1;91m\   /
+    [1;96m/|  /     /---`                        [1;93m403 Forbidden
+    [1;96m\\/`   \ |                                 [1;91m/ _ \
+    [1;96m`\    /_\\_              [1;93m502 Bad Gateway  [1;91m/ / \ \  [1;93m500 Internal Error
+      [1;96m`_____``-`                             [1;91m/_/   \_\
+
+                        [1;96m~ WAFW00F : [1;94mv2.2.0 ~[1;97m
+        The Web Application Firewall Fingerprinting Toolkit
+    [0m
+[*] Checking https://thgoporcides.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://alfeststore.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://www.analytics.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://flechagames.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://obrasenseco.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://tatetiparati.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://modalojinhadofuxico.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://infocrip.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://subdominios.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://analytics.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://clemiltondesouzarosa.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://developers.mercadoshops.com
+[+] The site [1;94mhttps://developers.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
+[~] Number of requests: 2
+[*] Checking https://pick-this.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://sapfhire.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://insumosyserviciosindustriales.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://aszi.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://sudomains.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://linestyle.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://mipol.com.ar.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://loveshop.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://soal9109207.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://clublanus.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://desativadosubdomains.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://heymamawolfdsg.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://montur.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://mercado.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://guillermomessina.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://diretoonline.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://subdomains.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://static.mercadoshops.com
+[+] The site [1;94mhttps://static.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
+[~] Number of requests: 2
+[*] Checking https://www.subdomains.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://palermofazio.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://2subdomains.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://dtgshop.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://multidc.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://todaviaestiempo.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://upavirtualcomar.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://monitor.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://electronicachacao.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://dydferreteria.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://lafrancoperfumeria.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://madererasudamericana.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://floni.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://materialesmoreno.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://almacenanamaria.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://excelinfo.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://altovicio.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://tienda.readytoparty.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://mail.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://www.api.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://desa.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://lacasadeleliminador.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://rodthia.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://alassio.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://www.blog.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://api.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://apdomingos.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://subdomians.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://alofino.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://kareninoacessorios.com.brsubdomains.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://surfax.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://caciquesombreros.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://blog.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://testdev.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://www.mercadoshops.com
+[+] The site [1;94mhttps://www.mercadoshops.com[0m is behind [1;96mCloudfront (Amazon)[0m WAF.
+[~] Number of requests: 2
+[*] Checking https://estampefotos.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://ayuda.mercadoshops.com
+[+] The site [1;94mhttps://ayuda.mercadoshops.com[0m is behind [1;96mAWS Elastic Load Balancer (Amazon)[0m WAF.
+[~] Number of requests: 2
+[*] Checking https://subdomain.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://jironesdemivida.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://prontomotos.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://hechoamanomarket.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+[*] Checking https://ariv5659788.mercadoshops.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
